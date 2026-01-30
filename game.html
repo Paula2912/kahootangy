@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Kahoot Arcade Retro</title>
+<link rel="stylesheet" href="css/1.css"> 
+<body>
+
+<img src="img/mario.png" class="character" id="mario">
+<img src="img/luigi.png" class="character" id="luigi">
+
+<div class="scoreboard">
+  PUNTOS: <span id="score">0</span>
+</div>
+
+<div class="arcade-screen">
+  <h2>¿Qué quería ser Ángela de pequeña?</h2>
+
+  <div class="answers" id="answers">
+    <button onclick="answer(0)">Profesora</button>
+    <button onclick="answer(1)">Mosquetera</button>
+    <button onclick="answer(2)">Policía</button>
+    <button onclick="answer(3)">Cantante</button>
+  </div>
+
+  <p id="feedback"></p>
+
+  <button id="continueBtn" onclick="next()" style="display:none;">
+    CONTINUAR
+  </button>
+</div>
+
+<script src="js/1.js"></script>
+</body>
+</html>

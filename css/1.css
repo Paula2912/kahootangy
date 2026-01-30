@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: #5c94fc;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nubes */
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 15%;
+  width: 60px;
+  height: 30px;
+  background: white;
+  box-shadow:
+    160px 10px white,
+    320px -5px white;
+}
+
+/* Suelo */
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: repeating-linear-gradient(
+    90deg,
+    #c84c0c 0px,
+    #c84c0c 40px,
+    #8b2c00 40px,
+    #8b2c00 44px
+  ),
+  repeating-linear-gradient(
+    0deg,
+    #c84c0c 0px,
+    #c84c0c 40px,
+    #8b2c00 40px,
+    #8b2c00 44px
+  );
+}
+
+/* marcador */
+
+.scoreboard {
+  background: black;
+  color: white;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  border: 3px solid white;
+  z-index: 2;
+}
+
+/* pantalla juego compacta */
+
+.arcade-screen {
+  background: #fff3c4;
+  border: 4px solid black;
+  padding: 20px;
+  width: 360px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* texto */
+
+h2 {
+  font-size: 11px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* botones */
+
+button {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  font-size: 9px;
+  font-family: 'Press Start 2P', cursive;
+  background: #ffcc00;
+  color: #000;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffa500;
+}
+
+#continueBtn {
+  margin-top: 10px;
+  background: #e52521;
+  color: white;
+}
+
+#feedback {
+  margin-top: 8px;
+  height: 20px;
+  font-size: 9px;
+  color: black;
+}
+
+/* personajes visibles */
+
+.character {
+  position: absolute;
+  bottom: 95px;
+  width: 80px;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+#mario {
+  left: 10px;
+}
+
+#luigi {
+  right: 10px;
+}
